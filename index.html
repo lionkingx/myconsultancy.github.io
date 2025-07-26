@@ -18,7 +18,29 @@
       height: 300px;
       object-fit: cover;
     }
-  </style>
+    form {
+  max-width: 600px;
+  margin: auto;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0052cc;
+}
+</style>
 </head>
 <body>
 
@@ -87,11 +109,20 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Phone: +91 99044 02522 (Mr. V Jayasekharan)<br>
-    Email: [Insert your preferred email here]<br>
-    WhatsApp: Same as above</p>
-  </section>
+  <h2>Contact Us</h2>
+  <form action="https://formsubmit.co/pksaras@email.com" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
 </body>
 </html>
