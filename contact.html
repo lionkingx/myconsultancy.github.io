@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us • CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner"><img src="banner.jpg" alt="Consultancy Banner"></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="objective.html">Objective</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </nav>
+  <header><h1>Contact Us</h1></header>
+  <main>
+    <form action="https://formsubmit.co/consultantsscientificservices@gmail.com" method="POST">
+      <!-- Formsubmit settings -->
+      <input type="hidden" name="_subject"  value="New inquiry from Consultants Scientific Services">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next"     value="https://lionkingx.github.io/myconsultancy.github.io/thankyou.html">
+      <input type="hidden" name="_captcha"  value="false">
+      <input type="hidden" name="_replyto" id="replyto">
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required
+             oninput="document.getElementById('replyto').value=this.value;">
+
+      <label for="phone">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  <footer>© Consultants Scientific Services</footer>
+</body>
+</html>
