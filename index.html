@@ -113,14 +113,28 @@ Vast experience in the extraction of cobalt, nickel and other bye products. Expe
     <p>We welcome enthusiastic and skilled professionals to join us in our mission. Interested candidates and collaborators are encouraged to contact us to explore opportunities within our consultancy group.</p>
   </section>
 
-  <section id="contact">
+<section id="contact">
   <h2>Contact Us</h2>
+
   <form action="https://formsubmit.co/consultantsscientificservices@gmail.com" method="POST">
+    <!-- Formsubmit settings -->
+    <input type="hidden" name="_subject"  value="New inquiry from Consultants Scientific Services">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next"     value="https://lionkingx.github.io/myconsultancy.github.io/thankyou.html">
+    <input type="hidden" name="_captcha"  value="false">
+
+    <!-- We'll mirror this into _replyto so it's in Reply-To AND the email body -->
+    <input type="hidden" name="_replyto" id="replyto">
+
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
 
     <label for="email">Your Email:</label><br>
-    <input type="email" id="email" name="_replyto" required><br><br>
+    <input type="email" id="email" name="email" required
+           oninput="document.getElementById('replyto').value=this.value;"><br><br>
+
+    <label for="phone">Phone (optional):</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
 
     <label for="message">Message:</label><br>
     <textarea id="message" name="message" rows="5" required></textarea><br><br>
@@ -128,6 +142,7 @@ Vast experience in the extraction of cobalt, nickel and other bye products. Expe
     <button type="submit">Send Message</button>
   </form>
 </section>
+
 
 </body>
 </html>
